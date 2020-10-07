@@ -1,5 +1,7 @@
 # Cryptic
 
+![Status: Work in Progress](https://img.shields.io/badge/Status-Work&#32;in&#32;Progress-blue.svg)
+
 What starts out as a regular Halloween evening for Oliver quickly turns into a confusing, disturbing
 mystery that must be solved. Explore the town of Auburn in search of answers. Will you be able to
 figure out what is going on?
