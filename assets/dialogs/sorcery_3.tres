@@ -1,0 +1,13 @@
+{
+  "Messages" : [
+    {
+      "Actor": "Friend",
+      "ActorColor": "blue",
+      "Message": "Hey, Oliver! Did you find Gulliver yet?"
+    },
+    {
+      "Actor": "You",
+      "Message": "What do you care? You didn't even try to find him."
+    }
+  ]
+}

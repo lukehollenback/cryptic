@@ -1,0 +1,13 @@
+{
+  "Messages" : [
+	{
+	  "Actor": "Sister",
+	  "ActorColor": "blue",
+	  "Message": "Did you check out [orange]Auburn Hall[/color] yet?"
+	},
+	{
+	  "Actor": "You",
+	  "Message": "..."
+	}
+  ]
+}

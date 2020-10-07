@@ -1,0 +1,133 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Object",
+"class": "C",
+"language": "GDScript",
+"path": "res://classes/global/C.gd"
+}, {
+"base": "Object",
+"class": "Colors",
+"language": "GDScript",
+"path": "res://classes/global/Colors.gd"
+}, {
+"base": "Object",
+"class": "DialogMessage",
+"language": "GDScript",
+"path": "res://classes/dialog/DialogMessage.gd"
+}, {
+"base": "Object",
+"class": "Directions",
+"language": "GDScript",
+"path": "res://classes/global/Directions.gd"
+}, {
+"base": "Object",
+"class": "G",
+"language": "GDScript",
+"path": "res://classes/global/G.gd"
+}, {
+"base": "Area2D",
+"class": "Interactable",
+"language": "GDScript",
+"path": "res://classes/Interactable.gd"
+}, {
+"base": "Node",
+"class": "Moveable",
+"language": "GDScript",
+"path": "res://classes/Movable.gd"
+}, {
+"base": "ColorRect",
+"class": "OutlinedColorRect",
+"language": "GDScript",
+"path": "res://classes/OutlinedColorRect.gd"
+}, {
+"base": "Stepable",
+"class": "RandomMovementStepable",
+"language": "GDScript",
+"path": "res://classes/RandomMovementStepable.gd"
+}, {
+"base": "Node",
+"class": "Stepable",
+"language": "GDScript",
+"path": "res://classes/Stepable.gd"
+} ]
+_global_script_class_icons={
+"C": "",
+"Colors": "",
+"DialogMessage": "",
+"Directions": "",
+"G": "",
+"Interactable": "",
+"Moveable": "",
+"OutlinedColorRect": "",
+"RandomMovementStepable": "",
+"Stepable": ""
+}
+
+[application]
+
+config/name="Cryptic"
+run/main_scene="res://rooms/Overworld.tscn"
+config/icon="res://icon.png"
+
+[display]
+
+window/size/width=160
+window/size/height=160
+window/size/test_width=640
+window/size/test_height=640
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
+[input]
+
+move_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777231,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777234,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
+ ]
+}
+interact={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":88,"unicode":0,"echo":false,"script":null)
+ ]
+}
+inv_one={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":90,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_clear_color=Color( 0, 0, 0, 1 )
+environment/default_environment="res://default_env.tres"

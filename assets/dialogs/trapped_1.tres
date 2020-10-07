@@ -1,0 +1,59 @@
+{
+  "Messages" : [
+    {
+      "Actor": "Rachel",
+      "ActorColor": "blue",
+      "Message": "Hey Oliver! You look tired. Did you have a long day?"
+    },
+    {
+      "Actor": "You",
+    	"Message": "Eh...I just woke up."
+    },
+    {
+    	"Actor": "Rachel",
+      "ActorColor": "blue",
+    	"Message": "I was afraid you were going to miss out on everything going on tonight. Your friends just came through."
+    },
+    {
+    	"Actor": "You",
+    	"Message": "They're not here...?"
+    },
+    {
+    	"Actor": "Rachel",
+      "ActorColor": "blue",
+    	"Message": "Not anymo... Gah, the [wave]wind[/wave] just blew the door shut. I lost the [yellow]Hall Key[/color] earlier today when I was unloading barrels of apple cider."
+    },
+    {
+    	"Actor": "Rachel",
+      "ActorColor": "blue",
+    	"Message": "Do you think you could help me out and look around for it? We're all stuck in here until we find it."
+    },
+    {
+    	"Actor": "You",
+    	"Message": "...I guess I better, huh?"
+    },
+    {
+    	"Actor": "Rachel",
+      "ActorColor": "blue",
+    	"Message": "Thanks, Oliver."
+    },
+    {
+    	"Actor": "Rachel",
+      "ActorColor": "blue",
+    	"Message": "Also, Gullivan left his [yellow]Journal[/color] here. Could you take it to him after you get the door unlocked?"
+    },
+    {
+    	"Actor": "You",
+    	"Message": "Yeah. Do you know where my friends all went?"
+    },
+    {
+    	"Actor": "Rachel",
+      "ActorColor": "blue",
+    	"Message": "It looked like they were heading towards the lagoon."
+    },
+    {
+    	"Actor": "You",
+    	"Message": "...Thanks. I better go find that key."
+    }
+  ]
+}

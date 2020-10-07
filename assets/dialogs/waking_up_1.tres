@@ -1,0 +1,27 @@
+{
+  "Messages" : [
+	{
+	  "Actor": "Sister",
+	  "ActorColor": "blue",
+	  "Message": "Oliver! It's Halloween! Did you just wake up...?"
+	},
+	{
+	  "Actor": "You",
+	  "Message": "...Wha..."
+	},
+	{
+	  "Actor": "Sister",
+	  "ActorColor": "blue",
+	  "Message": "You should go check out [orange]Auburn Hall[/color]. I just got back. There is an event going on there!"
+	},
+	{
+	  "Actor": "Sister",
+	  "ActorColor": "blue",
+	  "Message": "Here, take the [yellow]House Key[/color]. Don't want you to get locked out like you did last Halloween."
+	},
+	{
+	  "Actor": "You",
+	  "Message": "...Thanks."
+	}
+  ]
+}

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://objects/interactables/Door.gd" type="Script" id=1]
+[ext_resource path="res://assets/textures/door_closed.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 6, 6 )
+
+[node name="Door" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Interactable" type="Area2D" parent="." groups=[
+"interactables",
+"walls",
+]]
+script = ExtResource( 1 )
+object_name = "Door"
+action_phrase = "Unlock [orange]Door[/color]"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+position = Vector2( 6, 6 )
+shape = SubResource( 1 )

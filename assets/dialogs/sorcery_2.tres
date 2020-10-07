@@ -1,0 +1,50 @@
+{
+  "Messages" : [
+    {
+      "Actor": "Friend",
+      "ActorColor": "blue",
+      "Message": "[shake rate=5 level=7]...sHaKrA tOkRa OkRa CrOkRa...[/shake]"
+    },
+    {
+      "Actor": "You",
+      "Message": "[wave]Whaaat[/wave] are you all doing...?!"
+    },
+    {
+      "Actor": "Friend",
+      "ActorColor": "blue",
+      "Message": "Oh hey, Oliver!"
+    },
+    {
+      "Actor": "Friend",
+      "ActorColor": "blue",
+      "Message": "We're trying to summon...something...with this old spell book we found."
+    },
+    {
+      "Actor": "You",
+      "Message": "Huh... Hey, have you all seen Gulliver?"
+    },
+    {
+      "Actor": "Friend",
+      "ActorColor": "blue",
+      "Message": "He was with us earlier, but by the time we got here, he was no where to be found."
+    },
+    {
+      "Actor": "Friend",
+      "ActorColor": "blue",
+      "Message": "We figured he was just trailing behind a little."
+    },
+    {
+      "Actor": "You",
+      "Message": "You didn't go look for him?"
+    },
+    {
+      "Actor": "Friend",
+      "ActorColor": "blue",
+      "Message": "...We didn't really think to."
+    },
+    {
+      "Actor": "You",
+      "Message": "Geez. Some friends. I'm going to try to find him..."
+    },
+  ]
+}

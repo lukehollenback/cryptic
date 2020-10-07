@@ -1,0 +1,13 @@
+{
+  "Messages" : [
+    {
+      "Actor": "Friend",
+      "ActorColor": "blue",
+      "Message": "[shake rate=5 level=7]...sHaKrA tOkRa OkRa CrOkRa...[/shake]"
+    },
+    {
+      "Actor": "You",
+      "Message": "[wave]Whaaat[/wave] is going on up here..."
+    }
+  ]
+}
