@@ -41,8 +41,11 @@ func _input(event):
 	#
 	if event.is_action_pressed("interact") && _player.nearest_interactable != null:
 		_player.nearest_interactable.interact(self, _player)
-	elif event.is_action_pressed("inv_one") && G.get_prop(G.Keys.INV_GULLIVANS_JOURNAL, false):
-		create_dialog("journal")
+	elif event.is_action_pressed("inv_one"):
+		if G.get_prop(G.Keys.INV_GULLIVANS_JOURNAL, false):
+			create_dialog("journal")
+		else:
+			create_dialog("tickled")
 #
 # Returns whether or not a modal is currently displayed and all other actions should thus be
 # prevented.
@@ -76,7 +79,7 @@ static func load_dialog(dialog_name: String) -> Array:
 	#
 	# Read the file.
 	#
-	var file_name = ("res://assets/dialogs/%s.tres" % dialog_name)
+	var file_name = ("res://assets/dialogs/%s.json" % dialog_name)
 	var file = File.new()
 	var read = ""
 	

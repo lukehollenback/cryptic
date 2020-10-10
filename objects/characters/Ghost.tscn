@@ -1,18 +1,21 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://classes/RandomMovementStepable.gd" type="Script" id=1]
-[ext_resource path="res://assets/textures/person_male.png" type="Texture" id=2]
+[ext_resource path="res://assets/textures/ghost.png" type="Texture" id=2]
 [ext_resource path="res://classes/Movable.gd" type="Script" id=3]
-[ext_resource path="res://classes/Interactable.gd" type="Script" id=4]
+[ext_resource path="res://objects/characters/Ghost.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6, 6 )
 
-[node name="Bystandard" type="Area2D" groups=[
+[node name="Ghost" type="Area2D" groups=[
+"interactables",
 "walls",
 ]]
 script = ExtResource( 4 )
 can_move = true
+object_name = "Ghost"
+action_phrase = "Talk to [blue]Ghost[/color]"
 
 [node name="Moveable" type="Node" parent="."]
 script = ExtResource( 3 )

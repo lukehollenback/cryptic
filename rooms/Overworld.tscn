@@ -14,7 +14,7 @@
 [ext_resource path="res://objects/characters/Bystander.tscn" type="PackedScene" id=12]
 [ext_resource path="res://objects/characters/SorcererFriend.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/textures/person_male.png" type="Texture" id=14]
-[ext_resource path="res://assets/textures/ghost.png" type="Texture" id=15]
+[ext_resource path="res://objects/characters/Ghost.tscn" type="PackedScene" id=15]
 
 [node name="Node2D" type="Node2D"]
 
@@ -1010,6 +1010,69 @@ scale = Vector2( 1, 7 )
 position = Vector2( 444, 24 )
 scale = Vector2( 1, 5 )
 
+[node name="Wall419" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( 312, -216 )
+scale = Vector2( 3, 8 )
+
+[node name="Wall420" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( 300, -132 )
+scale = Vector2( 3, 9 )
+
+[node name="Wall421" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( 312, -36 )
+scale = Vector2( 3, 10 )
+
+[node name="Wall422" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( 300, 72 )
+scale = Vector2( 3, 13 )
+
+[node name="Wall423" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( 312, 216 )
+scale = Vector2( 3, 3 )
+
+[node name="Wall424" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( 312, 264 )
+scale = Vector2( 3, 8 )
+
+[node name="Wall425" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( 300, 348 )
+scale = Vector2( 3, 2 )
+
+[node name="Wall426" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( 288, 360 )
+scale = Vector2( 3, 16 )
+
+[node name="Wall427" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( 312, 540 )
+scale = Vector2( 12, 3 )
+
+[node name="Wall428" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( 444, 552 )
+scale = Vector2( 15, 3 )
+
+[node name="Wall431" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( 756, 552 )
+scale = Vector2( 20, 3 )
+
+[node name="Wall432" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( 984, 540 )
+scale = Vector2( 18, 3 )
+
+[node name="Wall433" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( 1188, 528 )
+scale = Vector2( 12, 3 )
+
+[node name="Wall429" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( 612, 564 )
+scale = Vector2( 6, 3 )
+
+[node name="Wall434" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( 300, 552 )
+
+[node name="Wall430" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( 696, 564 )
+scale = Vector2( 6, 3 )
+
 [node name="Wall91" parent="TileMap" instance=ExtResource( 4 )]
 position = Vector2( 504, 24 )
 scale = Vector2( 1, 4 )
@@ -1504,47 +1567,23 @@ texture = ExtResource( 14 )
 [node name="SorcererFriend4" parent="." instance=ExtResource( 13 )]
 position = Vector2( 1056, -108 )
 
-[node name="Ghost" parent="." instance=ExtResource( 12 )]
-position = Vector2( 228, 816 )
+[node name="Ghost" parent="." instance=ExtResource( 15 )]
+position = Vector2( 216, 816 )
 
-[node name="Sprite" parent="Ghost" index="3"]
-texture = ExtResource( 15 )
-
-[node name="Ghost2" parent="." instance=ExtResource( 12 )]
-position = Vector2( 204, 792 )
-
-[node name="Sprite" parent="Ghost2" index="3"]
-texture = ExtResource( 15 )
-
-[node name="Ghost3" parent="." instance=ExtResource( 12 )]
+[node name="Ghost2" parent="." instance=ExtResource( 15 )]
 position = Vector2( 96, 864 )
 
-[node name="Sprite" parent="Ghost3" index="3"]
-texture = ExtResource( 15 )
+[node name="Ghost3" parent="." instance=ExtResource( 15 )]
+position = Vector2( 84, 780 )
 
-[node name="Ghost4" parent="." instance=ExtResource( 12 )]
-position = Vector2( 144, 804 )
-
-[node name="Sprite" parent="Ghost4" index="3"]
-texture = ExtResource( 15 )
-
-[node name="Ghost5" parent="." instance=ExtResource( 12 )]
+[node name="Ghost4" parent="." instance=ExtResource( 15 )]
 position = Vector2( 96, 732 )
 
-[node name="Sprite" parent="Ghost5" index="3"]
-texture = ExtResource( 15 )
+[node name="Ghost5" parent="." instance=ExtResource( 15 )]
+position = Vector2( 168, 792 )
 
-[node name="Ghost6" parent="." instance=ExtResource( 12 )]
-position = Vector2( 48, 804 )
-
-[node name="Sprite" parent="Ghost6" index="3"]
-texture = ExtResource( 15 )
-
-[node name="Ghost7" parent="." instance=ExtResource( 12 )]
-position = Vector2( 180, 744 )
-
-[node name="Sprite" parent="Ghost7" index="3"]
-texture = ExtResource( 15 )
+[node name="Ghost6" parent="." instance=ExtResource( 15 )]
+position = Vector2( 204, 780 )
 
 [editable path="Telescope"]
 
@@ -1557,17 +1596,3 @@ texture = ExtResource( 15 )
 [editable path="SorcererFriend2"]
 
 [editable path="SorcererFriend3"]
-
-[editable path="Ghost"]
-
-[editable path="Ghost2"]
-
-[editable path="Ghost3"]
-
-[editable path="Ghost4"]
-
-[editable path="Ghost5"]
-
-[editable path="Ghost6"]
-
-[editable path="Ghost7"]

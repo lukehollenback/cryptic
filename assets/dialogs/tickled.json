@@ -1,0 +1,8 @@
+{
+  "Messages" : [
+    {
+      "Actor": "You",
+      "Message": "[shake rate=5 level=7]Eek![/shake] Something just [shake rate=5 level=7]tickled[/shake] me..."
+    }
+  ]
+}
