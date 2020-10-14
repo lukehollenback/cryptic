@@ -25,7 +25,8 @@ enum Keys {
 	INV_HOUSE_KEY = 100,
 	INV_HALL_KEY,
 	INV_GULLIVANS_JOURNAL,
-	INV_AMULET,
+	INV_BROKEN_VILE,
+	INV_GHOSTSPEAK_AMULET,
 	
 	#
 	# Story state properties (200 - 299).

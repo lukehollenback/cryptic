@@ -12,6 +12,8 @@ func _process(_delta):
 	$HouseKey.set_visible(G.get_prop(G.Keys.INV_HOUSE_KEY, false))
 	$HallKey.set_visible(G.get_prop(G.Keys.INV_HALL_KEY, false))
 	$GullivansJournal.set_visible(G.get_prop(G.Keys.INV_GULLIVANS_JOURNAL, false))
+	$BrokenVile.set_visible(G.get_prop(G.Keys.INV_BROKEN_VILE, false))
+	$GhostspeakAmulet.set_visible(G.get_prop(G.Keys.INV_GHOSTSPEAK_AMULET, false))
 	
 	#
 	# Update the interaction message if necessary.
@@ -39,7 +41,7 @@ func _input(event):
 	# Interact with the nearest interactable to the player if they are actually standing next
 	# to one.
 	#
-	if event.is_action_pressed("interact") && _player.nearest_interactable != null:
+	if event.is_action_pressed("interact") && is_instance_valid(_player.nearest_interactable) && _player.nearest_interactable.has_method("interact"):
 		_player.nearest_interactable.interact(self, _player)
 	elif event.is_action_pressed("inv_one"):
 		if G.get_prop(G.Keys.INV_GULLIVANS_JOURNAL, false):

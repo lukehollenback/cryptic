@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/fonts/bitty.tres" type="DynamicFont" id=1]
 [ext_resource path="res://objects/interface/Interface.gd" type="Script" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://assets/textures/key_hall.png" type="Texture" id=4]
 [ext_resource path="res://assets/textures/journal.png" type="Texture" id=5]
 [ext_resource path="res://classes/OutlinedColorRect.gd" type="Script" id=6]
+[ext_resource path="res://assets/textures/broken_vile.png" type="Texture" id=7]
+[ext_resource path="res://assets/textures/amulate_ghostspeak.png" type="Texture" id=8]
 
 [node name="Interface" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -71,6 +73,48 @@ outline_color = Color( 0.996078, 1, 1, 1 )
 
 [node name="Sprite" type="Sprite" parent="HallKey"]
 texture = ExtResource( 4 )
+centered = false
+offset = Vector2( 2, 2 )
+
+[node name="BrokenVile" type="ColorRect" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -20.1651
+margin_top = -80.213
+margin_right = -4.16513
+margin_bottom = -64.213
+color = Color( 0, 0, 0, 0.8 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+outline_color = Color( 0.996078, 1, 1, 1 )
+
+[node name="Sprite" type="Sprite" parent="BrokenVile"]
+texture = ExtResource( 7 )
+centered = false
+offset = Vector2( 2, 2 )
+
+[node name="GhostspeakAmulet" type="ColorRect" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -19.9174
+margin_top = -100.113
+margin_right = -3.91739
+margin_bottom = -84.113
+color = Color( 0, 0, 0, 0.8 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+outline_color = Color( 0.996078, 1, 1, 1 )
+
+[node name="Sprite" type="Sprite" parent="GhostspeakAmulet"]
+texture = ExtResource( 8 )
 centered = false
 offset = Vector2( 2, 2 )
 

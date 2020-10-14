@@ -7,7 +7,7 @@ var _finished_func = funcref(self, "finished")
 #
 func interact(interface: Node, _player: Node):
 	if !G.get_prop(G.Keys.STORY_GHOSTS_COMPLETE, false):
-		if !G.get_prop(G.Keys.INV_AMULET, false):
+		if !G.get_prop(G.Keys.INV_GHOSTSPEAK_AMULET, false):
 			interface.create_dialog("ghosts_1")
 		else:
 			interface.create_dialog("ghosts_2", _finished_func)

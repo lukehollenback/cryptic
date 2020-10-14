@@ -2,6 +2,7 @@ class_name Interactable
 extends Area2D
 
 export(bool) var can_move # Whether or not the object should update it's bounding box after initialization.
+export(bool) var is_child = true # Whether or not the object is a child of a greater node scene (as opposed to being its root).
 export(String) var object_name # The object's name during interaction.
 export(String) var action_phrase # The object's action phrase for display on the interface.
 
@@ -19,6 +20,22 @@ func _ready():
 
 func get_class():
 	return "Interactable"
+
+func destroy():
+	#
+	# First remove the interactable from all groups that it belongs to. We do this to prevent weird
+	# race conditions with invalid instances due to the way this game uses groups for signaling.
+	#
+	for group in get_groups():
+		remove_from_group(group)
+	
+	#
+	# Queue the appropriate element to be freed from the queue and thus destroyed.
+	#
+	if is_child:
+		_parent.queue_free()
+	else:
+		queue_free()
 
 #
 # Implemented by interactables for execution when the "interact" action is executed.
