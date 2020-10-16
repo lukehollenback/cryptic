@@ -1,0 +1,48 @@
+{
+  "Messages" : [
+    {
+      "Actor": "You",
+      "Message": "Lenny, look what I found! Down at the [orange]Forgotten Graveyard[/color]."
+    },
+    {
+      "Actor": "Lenny",
+      "ActorColor": "blue",
+      "Message": "This...is the vile of poison that someone stole from my shop earlier today!"
+    },
+    {
+      "Actor": "You",
+      "Message": "...Do you think someone drank it?"
+    },
+    {
+      "Actor": "Lenny",
+      "ActorColor": "blue",
+      "Message": "I hope not. This is some potent stuff...it's made with cadarva roots. There's no going back after a few sips of this, you'll be dead in a matter of minutes."
+    },
+    {
+      "Actor": "You",
+      "Message": "Geez..."
+    },
+    {
+      "Actor": "You",
+      "Message": "Hey, you wouldn't know how to talk to ghosts, would you?"
+    },
+    {
+      "Actor": "Lenny",
+      "ActorColor": "blue",
+      "Message": "As a matter of fact, I've been holding onto this [yellow]Ghostspeak Amulet[/color] for a long time now. Stole it out of my grandpa's sock drawer when I was a kid."
+    },
+    {
+      "Actor": "You",
+      "Message": "Does it work?"
+    },
+    {
+      "Actor": "Lenny",
+      "ActorColor": "blue",
+      "Message": "No idea, I just thought it looked cool. Give it a shot and let me know!"
+    },
+    {
+      "Actor": "You",
+      "Message": "Thanks!"
+    }
+  ]
+}

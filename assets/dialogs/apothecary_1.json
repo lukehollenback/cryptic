@@ -1,0 +1,31 @@
+{
+  "Messages" : [
+    {
+      "Actor": "Lenny",
+      "ActorColor": "blue",
+      "Message": "How's it going, Oliver?"
+    },
+    {
+      "Actor": "You",
+      "Message": "Eh, it's okay. How are you?"
+    },
+    {
+      "Actor": "Lenny",
+      "ActorColor": "blue",
+      "Message": "Not so great. Someone broke into the shop while I was out earlier. They stole some poison that I was experimenting with!"
+    },
+    {
+      "Actor": "You",
+      "Message": "...Why would someone steal that...?"
+    },
+    {
+      "Actor": "Lenny",
+      "ActorColor": "blue",
+      "Message": "I have no idea. Hey, if you hear anything, can you let me know?"
+    },
+    {
+      "Actor": "You",
+      "Message": "Sure thing, Lenny."
+    }
+  ]
+}

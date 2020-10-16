@@ -3,6 +3,7 @@
 [ext_resource path="res://objects/characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tilesets/tiles.tres" type="TileSet" id=2]
 [ext_resource path="res://objects/interface/Interface.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/characters/Lenny.tscn" type="PackedScene" id=4]
 [ext_resource path="res://objects/characters/Sister.tscn" type="PackedScene" id=5]
 [ext_resource path="res://objects/interactables/Door.tscn" type="PackedScene" id=6]
 [ext_resource path="res://objects/specials/Area.tscn" type="PackedScene" id=7]
@@ -14,7 +15,6 @@
 [ext_resource path="res://objects/characters/SorcererFriend.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/textures/person_male.png" type="Texture" id=14]
 [ext_resource path="res://objects/characters/Ghost.tscn" type="PackedScene" id=15]
-[ext_resource path="res://objects/interactables/BrokenVile.tscn" type="PackedScene" id=16]
 [ext_resource path="res://rooms/Overworld.gd" type="Script" id=17]
 
 [node name="Overworld" type="Node2D"]
@@ -204,8 +204,8 @@ position = Vector2( 168, 792 )
 [node name="Ghost6" parent="." instance=ExtResource( 15 )]
 position = Vector2( 204, 780 )
 
-[node name="Sister2" parent="." instance=ExtResource( 16 )]
-position = Vector2( 72, 888 )
+[node name="Lenny" parent="." instance=ExtResource( 4 )]
+position = Vector2( 132, -84 )
 
 [editable path="Telescope"]
 

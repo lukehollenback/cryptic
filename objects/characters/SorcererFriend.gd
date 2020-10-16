@@ -1,5 +1,7 @@
 extends Interactable
 
+const Vile = preload("res://objects/interactables/BrokenVile.tscn")
+
 var _finished_func = funcref(self, "finished")
 
 #
@@ -21,3 +23,12 @@ func finished():
 	# Wrap up the chapter.
 	#
 	G.set_prop(G.Keys.STORY_SORCERY_COMPLETE, true)
+	
+	#
+	# Create the Broken Vile object so that it can be found in the next chapter.
+	#
+	var vile = Vile.instance()
+	
+	vile.set_position(Vector2(120, 804))
+	
+	get_tree().get_root().add_child(vile)

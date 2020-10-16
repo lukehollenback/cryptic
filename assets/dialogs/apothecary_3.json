@@ -1,0 +1,13 @@
+{
+  "Messages" : [
+    {
+      "Actor": "Lenny",
+      "ActorColor": "blue",
+      "Message": "I can't believe someone broke into the shop earlier, Oliver!"
+    },
+    {
+      "Actor": "You",
+      "Message": "Sorry that happened, Lenny."
+    }
+  ]
+}
