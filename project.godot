@@ -80,12 +80,12 @@ config/icon="res://icon.png"
 
 [display]
 
-window/size/width=160
-window/size/height=160
-window/size/test_width=960
+window/size/width=192
+window/size/height=108
+window/size/test_width=1152
 window/size/test_height=640
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/stretch/aspect="keep"
 
 [input]
 
