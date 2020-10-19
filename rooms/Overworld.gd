@@ -92,6 +92,7 @@ const WallTiles = [
 		Vector2(8, 18),
 		Vector2(9, 18),
 		Vector2(6, 10),  # Fire Pit
+		Vector2(10, 6),  # Pumpkin
 	],
 	[
 		Vector2(19, 4), # Candle
