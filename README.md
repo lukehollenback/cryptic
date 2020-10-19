@@ -8,13 +8,13 @@ figure out what is going on?
 
 Inspired by underground classics of the past – like Twisterghost's LOLOMGWTFBBQ series – Cryptic is
 a short, eerie roguelite where you must help out friends, explore interesting areas, solve
-challenging puzzles, and ultimately figure out what the hell happened. If you are up for the
+challenging puzzles, and ultimately figure out what the heck happened. If you are up for the
 challenge, start playing now.
 
 ## Screenshots
 
 <p align="center">
-  <img src="./screenshots/(2020.9.25) Screenshot Saturday.gif" />
+  <img src="./screenshots/(2020.10.18)%20Apothecary.png" />
 </p>
 
 ## Copyright & Licensing
