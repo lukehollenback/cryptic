@@ -7,9 +7,8 @@ mystery that must be solved. Explore the town of Auburn in search of answers. Wi
 figure out what is going on?
 
 Inspired by underground classics of the past – like Twisterghost's LOLOMGWTFBBQ series – Cryptic is
-a short, eerie roguelite where you must help out friends, explore interesting areas, solve
-challenging puzzles, and ultimately figure out what the heck happened. If you are up for the
-challenge, start playing now.
+a short, eerie roguelite where you must help out friends, explore interesting areas, and ultimately
+figure out what happened. If you are up for the challenge, start playing now.
 
 ## Screenshots
 
