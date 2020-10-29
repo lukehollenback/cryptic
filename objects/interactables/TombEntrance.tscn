@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://objects/interactables/TombEntrance.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 6, 6 )
+
+[node name="TombEntrance" type="Node2D"]
+
+[node name="Interactable" type="Area2D" parent="." groups=[
+"walls",
+]]
+script = ExtResource( 1 )
+object_name = "Tomb Entrance"
+action_phrase = "Enter [orange]Tomb[/color]"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+position = Vector2( 6, 12 )
+scale = Vector2( 1, 2 )
+shape = SubResource( 1 )

@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://objects/tilemaps/Overworld.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/interface/Shadows.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/fonts/bitty_large.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/fonts/bitty.tres" type="DynamicFont" id=4]
+[ext_resource path="res://rooms/Credits.gd" type="Script" id=5]
+
+[node name="Credits" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="TileMap" parent="." instance=ExtResource( 1 )]
+position = Vector2( -72, 152 )
+
+[node name="Shadows" parent="." instance=ExtResource( 2 )]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 0.25
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.996078, 1, 1, 1 )
+text = "Cryptic"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewGame" type="Label" parent="CanvasLayer"]
+anchor_top = 0.25
+anchor_right = 1.0
+anchor_bottom = 0.75
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.996078, 1, 1, 1 )
+text = "Designed and Programmed by Luke Hollenback.
+-----
+\"Bitty\" font by MashArcade via itch.io.
+\"Urizen OneBit Tilesets\" by vermux via itch.io."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Label" parent="CanvasLayer"]
+anchor_top = 0.75
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.501961, 0.501961, 0.501961, 1 )
+text = "[X] Back to Menu"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

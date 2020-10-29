@@ -1,0 +1,77 @@
+{
+  "Messages" : [
+    {
+      "Actor": "Ghost",
+      "ActorColor": "blue",
+      "Message": "Hey guys! Watch me freak this kid out..."
+    },
+    {
+      "Actor": "Ghost",
+      "ActorColor": "blue",
+      "Message": "[shake rate=5 level=7]OoOh OoH OoOoOoOoH OhOoH![/shake]"
+    },
+    {
+      "Actor": "You",
+      "Message": "Who are you talking to?"
+    },
+    {
+      "Actor": "Ghost",
+      "ActorColor": "blue",
+      "Message": "[shake rate=5 level=7]...You can understand me?[/shake]"
+    },
+    {
+      "Actor": "You",
+      "Message": "Yeah...Lenny gave me this weird amulet and now I can understand you."
+    },
+    {
+      "Actor": "Ghost",
+      "ActorColor": "blue",
+      "Message": "...Oh."
+    },
+    {
+      "Actor": "You",
+      "Message": "Listen, I'm looking for my friend Gullivan. Have you seen him?"
+    },
+    {
+      "Actor": "Ghost",
+      "ActorColor": "blue",
+      "Message": "Maybe! Someone came through here not too long ago saying that they wished that they were a ghost."
+    },
+    {
+      "Actor": "Ghost",
+      "ActorColor": "blue",
+      "Message": "He drank some awful-smelling liquid out of a vile and then went into the tomb over there."
+    },
+    {
+      "Actor": "You",
+      "Message": "...You can smell?"
+    },
+    {
+      "Actor": "Ghost",
+      "ActorColor": "blue",
+      "Message": "Very well actually. You don't smell too good either, to be honest."
+    },
+    {
+      "Actor": "You",
+      "Message": "...Wow, okay. How do I get into the tomb?"
+    },
+    {
+      "Actor": "Ghost",
+      "ActorColor": "blue",
+      "Message": "You just go in. It's not like you're in a video game or something where this is a giant puzzle to solve."
+    },
+    {
+      "Actor": "You",
+      "Message": "...Ookay. I'm going to go try to find Gullivan."
+    },
+    {
+      "Actor": "Ghost",
+      "ActorColor": "blue",
+      "Message": "Good luck, Smelly!"
+    },
+    {
+      "Actor": "You",
+      "Message": "Mmm..."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "Messages" : [
+    {
+      "Actor": "Ghost",
+      "ActorColor": "blue",
+      "Message": "Hey did you find Gullivan yet?"
+    },
+    {
+      "Actor": "You",
+      "Message": "I don't know, can you [shake rate=5 level=7]smell[/shake] him next to me?"
+    },
+    {
+      "Actor": "Ghost",
+      "ActorColor": "blue",
+      "Message": "...What's your deal...?"
+    }
+  ]
+}

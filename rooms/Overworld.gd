@@ -13,8 +13,7 @@ const WallTiles = [
 		Vector2(5, 4),  # Stump
 		Vector2(6, 4),  # Dead Tree
 		Vector2(14, 4), # Cattails
-		Vector2(0, 3),  # Stone Wall
-		Vector2(1, 3),
+		Vector2(1, 3),  # Stone Wall
 		Vector2(2, 3),
 		Vector2(3, 3),
 		Vector2(4, 3),
@@ -91,7 +90,13 @@ const WallTiles = [
 		Vector2(7, 18),
 		Vector2(8, 18),
 		Vector2(9, 18),
+		Vector2(10, 18), # Cobwebs
+		Vector2(11, 18),
+		Vector2(12, 18),
+		Vector2(13, 18),
 		Vector2(6, 10),  # Fire Pit
+		Vector2(10, 10),
+		Vector2(6, 14),  # Wall Candle
 		Vector2(10, 6),  # Pumpkin
 	],
 	[

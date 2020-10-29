@@ -14,6 +14,7 @@ func _process(_delta):
 	$GullivansJournal.set_visible(G.get_prop(G.Keys.INV_GULLIVANS_JOURNAL, false))
 	$BrokenVile.set_visible(G.get_prop(G.Keys.INV_BROKEN_VILE, false))
 	$GhostspeakAmulet.set_visible(G.get_prop(G.Keys.INV_GHOSTSPEAK_AMULET, false))
+	$Gullivan.set_visible(G.get_prop(G.Keys.STORY_CRYPT_COMPLETE, false))
 	
 	#
 	# Update the interaction message if necessary.
@@ -46,6 +47,11 @@ func _input(event):
 	elif event.is_action_pressed("inv_one"):
 		if G.get_prop(G.Keys.INV_GULLIVANS_JOURNAL, false):
 			create_dialog("journal")
+		else:
+			create_dialog("tickled")
+	elif event.is_action_pressed("inv_two"):
+		if G.get_prop(G.Keys.STORY_CRYPT_COMPLETE, false):
+			create_dialog("gullivan")
 		else:
 			create_dialog("tickled")
 	elif event.is_action_pressed("screenshot"):

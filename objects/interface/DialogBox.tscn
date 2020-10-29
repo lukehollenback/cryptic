@@ -34,8 +34,10 @@ anchor_bottom = 1.0
 margin_left = 0.0885468
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.501961, 0.501961, 0.501961, 1 )
-text = "PRESS ANYTHING..."
+text = "Press Anything..."
 align = 1
+valign = 1
+uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

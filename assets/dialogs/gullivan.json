@@ -1,0 +1,18 @@
+{
+  "Messages" : [
+    {
+      "Actor": "Gullivan",
+      "ActorColor": "yellow",
+      "Message": "I can't believe you found me, Oliver!"
+    },
+    {
+      "Actor": "You",
+      "Message": "I know. Is the story really over?"
+    },
+    {
+      "Actor": "Gullivan",
+      "ActorColor": "yellow",
+      "Message": "I think so! Let's go scare someone!"
+    }
+  ]
+}

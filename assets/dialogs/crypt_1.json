@@ -1,0 +1,41 @@
+{
+  "Messages" : [
+    {
+      "Actor": "Gullivan",
+      "ActorColor": "blue",
+      "Message": "Oliver! What are you doing here!?"
+    },
+    {
+      "Actor": "You",
+      "Message": "I've been looking all over for you. What were you thinking?"
+    },
+    {
+      "Actor": "Gullivan",
+      "ActorColor": "blue",
+      "Message": "I...thought that this would feel right. But it is so lonely. Ghosts don't even really talk to each other."
+    },
+    {
+      "Actor": "You",
+      "Message": "Well...why don't you just \"haunt\" me so that we can hang out?"
+    },
+    {
+      "Actor": "Gullivan",
+      "ActorColor": "blue",
+      "Message": "Ha! That's not a bad idea at all!"
+    },
+    {
+      "Actor": "Gullivan",
+      "ActorColor": "blue",
+      "Message": "Okay, let's do it."
+    },
+    {
+      "Actor": "You",
+      "Message": "Good. Now that that's over with, let's go scare someone."
+    },
+    {
+      "Actor": "Gullivan",
+      "ActorColor": "blue",
+      "Message": "Sounds like a plan. Thanks for finding me, Oliver."
+    }
+  ]
+}
