@@ -14,6 +14,7 @@ figure out what happened. If you are up for the challenge, start playing now.
 
 - [Itch.io (play in browser -OR- download)](https://lukehollenback.itch.io/cryptic)
 - [Godot Forums Post](https://godotforums.org/discussion/24334/cryptic-1-0-just-released)
+- [Itch.io Forums Post](https://itch.io/t/1037764/cryptic-a-short-halloween-mystery-adventure-)
 - [Release Announcement Tweet](https://twitter.com/lukehollenback/status/1321820620837904385)
 
 ## Screenshots
