@@ -122,7 +122,6 @@ margin_right = -60.0
 margin_bottom = 90.0
 color = Color( 0, 0, 0, 1 )
 script = ExtResource( 6 )
-can_move = false
 outline_color = Color( 0.996078, 1, 1, 1 )
 
 [node name="Label" type="Label" parent="CanvasLayer/Warning"]

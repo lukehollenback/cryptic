@@ -7,7 +7,7 @@ const Wall = preload("res://objects/specials/Wall.tscn")
 # second-layer element is a coordinate on the related tile's atlas of a subtile that should be a
 # wall.
 #
-const WallTiles = [ 
+const WallTiles = [
 	[
 		Vector2(3, 4),  # Pine Tree
 		Vector2(5, 4),  # Stump
@@ -113,20 +113,20 @@ func _ready():
 	var debug_tile_id = $TileMap.get_cell(0, 0)
 	var debug_atlas_pos = $TileMap.get_cell_autotile_coord(0, 0)
 	var debug_real_pos = $TileMap.map_to_world(Vector2(0, 0))
-	
+
 	print("TileMap (0, 0) Cell = (cellId: %s, atlasPos: %s, realPos: %s)" % [String(debug_tile_id), String(debug_atlas_pos), String(debug_real_pos)])
-	
+
 	#
 	# Create walls everywhere that a collidable tile exists in the tilemap.
 	#
 	for cell_pos in $TileMap.get_used_cells():
 		var tile_id = $TileMap.get_cellv(cell_pos)
 		var atlas_pos = $TileMap.get_cell_autotile_coord(cell_pos.x, cell_pos.y)
-		
+
 		if atlas_pos in WallTiles[tile_id]:
 			var wall = Wall.instance()
 			var wall_pos = $TileMap.map_to_world(cell_pos)
-			
+
 			wall.set_position(wall_pos)
-			
+
 			$TileMap.add_child(wall)

@@ -12,7 +12,7 @@ func interact(interface: Node, _player: Node):
 		interface.create_dialog("apothecary_2", _finished_func)
 	else:
 		interface.create_dialog("apothecary_3")
-	
+
 
 #
 # Function to be executed once the dialog is completed.

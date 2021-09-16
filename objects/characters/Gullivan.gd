@@ -20,4 +20,7 @@ func interact(interface: Node, _player: Node):
 # Function to be executed once the dialog is completed.
 #
 func finished():
+	#
+	# Update the save file to say that the game has been beaten.
+	#
 	G.set_prop(G.Keys.STORY_CRYPT_COMPLETE, true)

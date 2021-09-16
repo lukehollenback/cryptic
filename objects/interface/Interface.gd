@@ -3,7 +3,16 @@ extends CanvasLayer
 const DialogBox = preload("res://objects/interface/DialogBox.tscn")
 const DialogMessage = preload("res://classes/dialog/DialogMessage.gd")
 
+const _FADE_INTERVAL := 0.2 # seconds
+
 onready var _player = get_parent().get_node("Player")
+onready var _menu_scene = load("res://rooms/Menu.tscn")
+
+func _ready() -> void:
+	#
+	# Initially hide the blackout rectangle.
+	#
+	$Blackout.hide()
 
 func _process(_delta):
 	#
@@ -15,7 +24,7 @@ func _process(_delta):
 	$BrokenVile.set_visible(G.get_prop(G.Keys.INV_BROKEN_VILE, false))
 	$GhostspeakAmulet.set_visible(G.get_prop(G.Keys.INV_GHOSTSPEAK_AMULET, false))
 	$Gullivan.set_visible(G.get_prop(G.Keys.STORY_CRYPT_COMPLETE, false))
-	
+
 	#
 	# Update the interaction message if necessary.
 	#
@@ -23,10 +32,10 @@ func _process(_delta):
 		$Interaction.set_visible(false)
 	else:
 		var txt = "[" + C.INTERACT_KEY + "] " + Colors.parse_bbcode(_player.nearest_interactable.action_phrase)
-		
+
 		$Interaction.set_bbcode(txt)
 		$Interaction.set_visible(true)
-	
+
 	#
 	# Update the area message if necessary.
 	#
@@ -37,7 +46,7 @@ func _process(_delta):
 
 func _input(event):
 	if has_modal(): return
-	
+
 	#
 	# Interact with the nearest interactable to the player if they are actually standing next
 	# to one.
@@ -50,41 +59,82 @@ func _input(event):
 		else:
 			create_dialog("tickled")
 	elif event.is_action_pressed("inv_two"):
+		# NOTE: If the story is complete, then after the player speaks with Gullivan we will begin the
+		#  blackout and final cutscene.
+
 		if G.get_prop(G.Keys.STORY_CRYPT_COMPLETE, false):
-			create_dialog("gullivan")
+			create_dialog("gullivan", funcref(self, "start_blackout"))
 		else:
 			create_dialog("tickled")
 	elif event.is_action_pressed("screenshot"):
 		var capture = get_viewport().get_texture().get_data()
-		
+
 		capture.flip_y()
 		capture.resize(capture.get_width() * 4, capture.get_height() * 4, false)
 		capture.save_png("user://screenshot.png")
-		
+
 		print("Screenshot taken and saved to %s." % (OS.get_user_data_dir() + "/screenshot.png"))
+	elif event.is_action_pressed("exit"):
+		G.handle_error(get_tree().change_scene_to(_menu_scene))
+
+func _on_BlackoutTimer_timeout() -> void:
+	var alpha: float = $Blackout.color.a
+
+	if alpha < 1.0:
+		$Blackout.color = Colors.BLACK
+		$Blackout.color.a = (alpha + 0.1)
+
+		var err := get_tree().create_timer(_FADE_INTERVAL).connect("timeout", self, "_on_BlackoutTimer_timeout")
+		assert(err == OK)
+	else:
+		create_dialog("game_over", funcref(self, "_blackout_finished_func"), true)
+
+#
+# Executed when the final blackout cutscene dialog finishes.
+#
+func _blackout_finished_func() -> void:
+	G.handle_error(get_tree().change_scene_to(_menu_scene))
+
 #
 # Returns whether or not a modal is currently displayed and all other actions should thus be
 # prevented.
 #
 func has_modal():
-	return has_node("DialogBox")
+	return $Blackout.visible or has_node("DialogBox")
+
+#
+# Starts the end-of-game blackout cutscene.
+#
+func start_blackout() -> void:
+	#
+	# Initialize the blackout modal to the correct color and make it visible.
+	#
+	$Blackout.color = Colors.BLACK
+	$Blackout.color.a = 0.0
+	$Blackout.show()
+
+	#
+	# Start the timer that will fade the blackout in.
+	#
+	var err := get_tree().create_timer(_FADE_INTERVAL).connect("timeout", self, "_on_BlackoutTimer_timeout")
+	assert(err == OK)
 
 #
 # Loads the specified dialog resource and creates a new DialogBox modal to show it.
 #
-func create_dialog(dialog: String, finished_func: FuncRef = null):
-	if has_modal(): return
-	
+func create_dialog(dialog: String, finished_func: FuncRef = null, force_appear: bool = false):
+	if not force_appear and has_modal(): return
+
 	#
 	# Actually load the dialog and create a model to display it.
 	#
 	var msgs = load_dialog(dialog)
 	var dialog_box = DialogBox.instance()
-	
+
 	dialog_box.dialog = dialog
 	dialog_box.msgs = msgs
 	dialog_box.finished_func = finished_func
-	
+
 	add_child(dialog_box)
 
 #
@@ -98,19 +148,19 @@ static func load_dialog(dialog_name: String) -> Array:
 	var file_name = ("res://assets/dialogs/%s.json" % dialog_name)
 	var file = File.new()
 	var read = ""
-	
+
 	file.open(file_name, File.READ)
-	
+
 	read = file.get_as_text()
-		
+
 	file.close()
-	
+
 	#
 	# Perform necessary interpolation on the read file. We do this here so that we don't have to
 	# do it per-message or per-line somewhere else...which could be a performance hit.
 	#
 	read = Colors.parse_bbcode(read)
-	
+
 	#
 	# Parse the file from JSON into an array of DialogMessages.
 	#
@@ -118,21 +168,21 @@ static func load_dialog(dialog_name: String) -> Array:
 	var json_obj = json.get_result()
 	var json_msgs = json_obj.get("Messages")
 	var dialog_msgs = [ ]
-	
+
 	for json_msg in json_msgs:
 		var msg_actor = json_msg.get("Actor")
 		var msg_actor_color_raw = json_msg.get("ActorColor", "gray")
 		var msg_actor_color = Colors.lookup_color(msg_actor_color_raw)
 		var msg_content = json_msg.get("Message")
 		var dialog_msg = DialogMessage.new(msg_actor, msg_actor_color, msg_content)
-		
+
 		dialog_msgs.append(dialog_msg)
-		
+
 	#
 	# Output some debug info.
 	#
 	print("Loaded \"%s\" dialog." % file_name)
-	
+
 	#
 	# Return the loaded DialogMessages.
 	#

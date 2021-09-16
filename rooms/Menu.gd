@@ -39,12 +39,12 @@ func _ready():
 	#
 	if !OS.is_userfs_persistent():
 		print("Warning: The user filesystem is not a persistent storage location. Saved games will not persist cross-session.")
-	
+
 	#
 	# Highlight the initially-highlighted menu item.
 	#
 	highlight_menu_item()
-	
+
 	#
 	# Show/hide any platform-sepcific messages.
 	#
@@ -52,7 +52,7 @@ func _ready():
 		$CanvasLayer/Warning.set_visible(true)
 	else:
 		$CanvasLayer/Warning.set_visible(false)
-	
+
 func _input(event):
 	#
 	# If a relevant button was pressed, detect it and perform the necessary action.
@@ -74,12 +74,14 @@ func _input(event):
 				G.handle_error(OS.shell_open("https://lukehollenback.itch.io/"))
 	elif event.is_action_pressed("screenshot"):
 		var capture = get_viewport().get_texture().get_data()
-		
+
 		capture.flip_y()
 		capture.resize(capture.get_width() * 4, capture.get_height() * 4, false)
 		capture.save_png("user://screenshot.png")
-		
+
 		print("Screenshot taken and saved to %s." % (OS.get_user_data_dir() + "/screenshot.png"))
+	elif event.is_action_pressed("exit"):
+		get_tree().quit()
 
 	#
 	# Box the highlighted menu index into the appropriate range.
@@ -88,7 +90,7 @@ func _input(event):
 		menu_index = 0
 	elif menu_index < 0:
 		menu_index = (menu_nodes.size() - 1)
-		
+
 	#
 	# Highlight the appropriate menu item.
 	#
@@ -100,5 +102,5 @@ func _input(event):
 func highlight_menu_item():
 	for node in menu_nodes:
 		node.set("custom_colors/font_color", Colors.WHITE)
-	
+
 	menu_nodes[menu_index].set("custom_colors/font_color", Colors.YELLOW)

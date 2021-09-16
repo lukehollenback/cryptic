@@ -5,7 +5,7 @@ func _ready():
 		if node.get_class() == "ColorRect":
 			var a = node.color.a
 			var c = Colors.BLACK
-			
+
 			c.a = a
-			
+
 			node.color = c

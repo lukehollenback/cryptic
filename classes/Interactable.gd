@@ -28,7 +28,7 @@ func destroy():
 	#
 	for group in get_groups():
 		remove_from_group(group)
-	
+
 	#
 	# Queue the appropriate element to be freed from the queue and thus destroyed.
 	#
@@ -42,7 +42,7 @@ func destroy():
 #
 func interact(_interface: Node, _player: Node):
 	print("Unimplemented interact method.")
-	
+
 #
 # Recalculates the bounding box used by at_position(...). Is called once by _ready(), and then only
 # ever called again if can_move is set to true.
@@ -50,7 +50,7 @@ func interact(_interface: Node, _player: Node):
 func update_bounding_box():
 	var parent_x = _parent.get_position().x
 	var parent_y = _parent.get_position().y
-	
+
 	_scaled_extents = ($CollisionShape2D.get_shape().get_extents() * scale)
 	_scaled_position = ($CollisionShape2D.get_position() * scale)
 	_x_start = (parent_x + position.x + (_scaled_position.x - _scaled_extents.x))
@@ -64,10 +64,10 @@ func update_bounding_box():
 func at_position(pos: Vector2) -> bool:
 	if can_move:
 		update_bounding_box()
-	
+
 	if (pos.x >= _x_start && pos.x < _x_end) && (pos.y >= _y_start && pos.y < _y_end):
 		return true
-	
+
 	return false
 
 #
@@ -79,8 +79,8 @@ static func any_at_position(tree: SceneTree, group: String, pos: Vector2) -> Int
 		if node.get_class() != "Interactable":
 			print("Node is in group \"%s\" was not of type Interactable (was %s)." % [group, node.get_class()])
 			continue
-		
+
 		if node.at_position(pos):
 			return node
-	
+
 	return null

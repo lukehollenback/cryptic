@@ -16,11 +16,11 @@ func _ready():
 func _draw():
 	if can_move:
 		update_rect()
-	
+
 	draw_rect(rect, outline_color, false, 1, false)
 
 func update_rect():
 	# NOTE: We have to do some wonky stuff here because of how Godot references pixels when it
 	#  talks to OpenGL. Maybe one day we can switch this back to be 0s instead of 0.5s.
-	
+
 	rect = Rect2(Vector2(0.5, 0.5), get_size())

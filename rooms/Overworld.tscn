@@ -329,19 +329,11 @@ drag_margin_bottom = 0.0
 script = ExtResource( 18 )
 
 [editable path="Telescope"]
-
 [editable path="HouseDoor"]
-
 [editable path="LakeSign"]
-
 [editable path="PumpkinPatchSign"]
-
 [editable path="WestSideSign"]
-
 [editable path="SouthSideSign"]
-
 [editable path="SorcererFriend"]
-
 [editable path="SorcererFriend2"]
-
 [editable path="SorcererFriend3"]

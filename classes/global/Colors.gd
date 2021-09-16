@@ -38,11 +38,11 @@ static func parse_bbcode(bbcode: String) -> String:
 	for key in LOOKUP:
 		var find = ("[color=" + key + "]")
 		var replace = ("[color=#" + LOOKUP[key].to_html() + "]")
-		
+
 		bbcode = bbcode.replacen(find, replace)
-		
+
 		find = ("[" + key + "]")
-		
+
 		bbcode = bbcode.replacen(find, replace)
-	
+
 	return bbcode

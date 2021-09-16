@@ -1,0 +1,20 @@
+{
+    "Messages" : [
+      {
+        "Actor": "Narrator",
+        "Message": "The night got darker as time went on."
+      },
+      {
+        "Actor": "Narrator",
+        "Message": "Oliver and Gullivan spooked nearly all of Auburn."
+      },
+      {
+        "Actor": "Narrator",
+        "Message": "Their friends were especially terrified...perhaps they should have payed more attention when Gullivan went missing."
+      },
+      {
+        "Actor": "Narrator",
+        "Message": "Eventually, Auburn became quiet. The friends went back to Oliver's home for the night, putting an end to one strange dream."
+      }
+    ]
+  }
